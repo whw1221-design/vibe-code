@@ -1,0 +1,17 @@
+{
+  "name": "crud-test2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Single-process deployment for the CRUD Studio React + Express app",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "setup": "npm --prefix backend install --include=dev && npm --prefix frontend install --include=dev",
+    "db:setup": "npm --prefix backend run db:setup",
+    "seed": "npm --prefix backend run seed",
+    "build": "npm --prefix frontend run build",
+    "start": "npm --prefix backend start",
+    "serve": "npm run build && npm start"
+  }
+}

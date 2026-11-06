@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: crud-studio
+    runtime: node
+    buildCommand: npm run setup && npm run db:setup && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: CORS_ORIGIN
+        value: '*'
